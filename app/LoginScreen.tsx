@@ -21,7 +21,7 @@ export default function LoginScreen() {
   const handleLogin = () => {
     // Validasi login sederhana
     if (email === "admin@mail.com" && password === "1234567890") {
-      router.replace({ pathname: "/home", params: { name: "Admin" } });
+      router.replace({ pathname: "../HomeScreen", params: { name: "Admin" } });
     } else {
       Alert.alert("❌ Error", "Email atau Password salah! (Coba daftar dulu)");
     }
@@ -59,7 +59,7 @@ export default function LoginScreen() {
         </Pressable>
 
         <Pressable
-          onPress={() => router.push("/register")}
+          onPress={() => router.push("./RegisterScreen")}
           style={styles.linkContainer}
         >
           <Text style={styles.link}>

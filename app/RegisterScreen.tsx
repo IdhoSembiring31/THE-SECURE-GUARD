@@ -56,8 +56,16 @@ export default function RegisterScreen() {
         "Password dan Confirm Password harus sama!",
       );
 
-    Alert.alert("🎉 Sukses!", "Akun berhasil dibuat!");
-    router.replace({ pathname: "/home", params: { name: trimmedName } });
+    Alert.alert("🎉 Sukses!", "Akun berhasil dibuat!", [
+      {
+        text: "OK",
+        onPress: () =>
+          router.replace({
+            pathname: "./HomeScreen",
+            params: { name: trimmedName },
+          }),
+      },
+    ]);
   };
 
   return (
