@@ -7,7 +7,7 @@ export default function HomeScreen() {
   const { name } = useLocalSearchParams();
 
   const handleLogout = () => {
-    router.replace("/");
+    router.replace("./LoginScreen");
   };
 
   return (
